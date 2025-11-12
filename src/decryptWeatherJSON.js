@@ -30,7 +30,7 @@ export const displayWeather = function(weatherObj) {
 
     const currentConditionDiv = document.createElement("div");
     currentConditionDiv.classList.add("currentCondition-div");
-    currentConditionDiv.textContent = weatherObj.currenConditions;
+    currentConditionDiv.textContent = weatherObj.currentCondition;
 
     const feelsLikeDiv = document.createElement("div");
     feelsLikeDiv.classList.add("feelsLike-div");
