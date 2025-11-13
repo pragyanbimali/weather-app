@@ -4,7 +4,7 @@ const  fetch_weather = async function() {
     const location = getLocationFromUser();
     
     const apiKey = 'LYXRQ73KS7WH5K96L6VSA8GZ3';    
-    const fetchURL = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?key=${apiKey}`;
+    const fetchURL = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?unitGroup=metric&key=${apiKey}`;
     
     const response = await fetch(fetchURL);
     
