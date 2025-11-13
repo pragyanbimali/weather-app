@@ -11,8 +11,26 @@ html, body {
 body {
     position: relative;
     font-family: "Poppins", sans-serif;
+    background-image: url(../assets/images/bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+ h1 {
+    color: rgb(210, 249, 250);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 3rem;
+ }
+
+.header {
+    display: flex;
+    gap: 2rem;
 }
 
+img {
+    height: 4rem;
+    width: 4.5rem;
+}
 
 .main-container {
     display: flex;
@@ -33,7 +51,7 @@ body {
         "description description description";
     gap: 2rem;
     border-radius: 1rem;
-    background-color: rgba(79, 209, 241, 0.8);
+    background-color: rgba(141, 213, 231, 0.8);
     padding: 1rem;
     box-shadow: 5px 5px 15px gray;
 }
@@ -66,3 +84,19 @@ body {
     grid-area: feelslike;
 }
 
+form {
+    display: flex;
+    gap: 1rem;
+}
+
+button {
+    width: 2rem;
+    background-color: none;
+}
+
+input {
+    height: 2rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 1px solid gray;
+}
