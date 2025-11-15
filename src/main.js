@@ -1,8 +1,7 @@
 import './style.css'
 
 import { fetch_weather } from './fetch.js';
-import { decryptWeatherJSON } from './decryptWeatherJSON.js'
-import { displayWeather } from './decryptWeatherJSON.js';
+import { decryptWeatherJSON, displayWeather } from './decryptWeatherJSON.js'
 
 const form = document.querySelector('form');
 

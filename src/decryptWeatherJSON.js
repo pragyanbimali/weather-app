@@ -16,6 +16,10 @@ export const decryptWeatherJSON = function(weatherJSON) {
 export const displayWeather = function(weatherObj) {
     const mainContainer = document.querySelector(".main-container");
     const body = document.querySelector("body")
+    
+    // Remove previous weather result
+    const oldWeather = document.querySelector(".weather-details-container");
+    if (oldWeather) oldWeather.remove();
 
     const weatherContainer = document.createElement("div");
     weatherContainer.classList.add("weather-details-container")
@@ -47,6 +51,7 @@ export const displayWeather = function(weatherObj) {
 
     const condition = weatherObj.currentCondition.toLowerCase();
 
+    
     if (condition.includes('sunny') || condition.includes('clear')) {
         body.style.backgroundImage = `url(${sunnyImg})`;
     } else if (condition.includes('cloudy') || condition.includes('overcast') || condition.includes('Partially cloudy')) {
@@ -58,7 +63,7 @@ export const displayWeather = function(weatherObj) {
     body.style.backgroundSize = "cover";
     body.style.backgroundPosition = "center";
     body.style.backgroundRepeat = "no-repeat";
-
+    
     weatherContainer.appendChild(tempDiv);
     weatherContainer.appendChild(locationDiv);
     weatherContainer.appendChild(descDiv);
@@ -66,6 +71,8 @@ export const displayWeather = function(weatherObj) {
     weatherContainer.appendChild(currentConditionDiv);
     weatherContainer.appendChild(feelsLikeDiv);
     
+    console.log(mainContainer.children)
+
     mainContainer.appendChild(weatherContainer);
 
 }
