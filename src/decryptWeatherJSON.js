@@ -20,6 +20,7 @@ export const displayWeather = function(weatherObj) {
     const weatherContainer = document.createElement("div");
     weatherContainer.classList.add("weather-details-container")
 
+    
     const tempDiv = document.createElement("div");
     tempDiv.classList.add("temp-div");
     tempDiv.textContent = `${weatherObj.temperature}°C`;
@@ -48,7 +49,7 @@ export const displayWeather = function(weatherObj) {
 
     if (condition.includes('sunny') || condition.includes('clear')) {
         body.style.backgroundImage = `url(${sunnyImg})`;
-    } else if (condition.includes('cloudy') || condition.includes('overcast')) {
+    } else if (condition.includes('cloudy') || condition.includes('overcast') || condition.includes('Partially cloudy')) {
         body.style.backgroundImage = `url(${overcastImg})`;
     } else if (condition.includes('rainy') || condition.includes('rain')) {
         body.style.backgroundImage = `url(${rainImg})`;
@@ -58,14 +59,13 @@ export const displayWeather = function(weatherObj) {
     body.style.backgroundPosition = "center";
     body.style.backgroundRepeat = "no-repeat";
 
-
     weatherContainer.appendChild(tempDiv);
     weatherContainer.appendChild(locationDiv);
     weatherContainer.appendChild(descDiv);
     weatherContainer.appendChild(humidityDiv);
     weatherContainer.appendChild(currentConditionDiv);
     weatherContainer.appendChild(feelsLikeDiv);
-
+    
     mainContainer.appendChild(weatherContainer);
 
 }

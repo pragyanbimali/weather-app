@@ -16,3 +16,4 @@ form.addEventListener('submit', async (e) => {
 
     displayWeather(weatherObj);
 });
+
